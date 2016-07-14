@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		*{padding: 0;margin: 0;}
+		#banner{color: red;background:blue;}
+		#sidebar{color: pink;background:#ccc;}
+	</style>
+	<script src="https://npmcdn.com/vue/dist/vue.js"></script>
+</head>
+<body>
+	<div id="app">
+		<app-banner></app-banner>
+		<app-sidebar></app-sidebar>
+	</div>
+
+
+	
+	<script>
+		
+
+		var appBanner = Vue.extend({
+			template:"<p id='banner'>i'm banner</p>"
+		});
+		var appSidebar = Vue.extend({
+			template:"<p id='sidebar'>i'm sidebar</p>"
+		});
+
+		Vue.component("app-banner",appBanner)
+		Vue.component("app-sidebar",appSidebar)
+
+
+
+		new Vue({
+			el:"#app"
+		});
+	</script>
+
+</body>
+</html>
